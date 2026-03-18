@@ -1,0 +1,12 @@
+@media (max-width: 767px) {
+  .hero-image {
+    display: block;
+    margin-left: 25% !important;
+    margin-bottom: -13% !important;
+    margin-right: auto !important;
+  }
+
+  .hero-heading {
+    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.35);
+  }
+}

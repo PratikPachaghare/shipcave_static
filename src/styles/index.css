@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+    /* YOUR PALETTE */
+    --color-primary: #2A2575;
+    /* #2A2575 - Deep Blue */
+    --color-secondary: #3B63B8;
+    /* #3B63B8 - Medium Blue */
+    --color-accent: #E2241C;
+    /* #E2241C - Red */
+    --color-text-main: #001827;
+    /* Dark text */
+    --color-text-body: #666666;
+    /* #666666 - Gray text */
+    --color-bg-light: #EFF6FF;
+    /* Light background for sections */
+}
+
+/* Custom Animation for Logo Scroll */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* Utilities */
+.container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* ===== Marquee Animation ===== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 2.5rem;
+  white-space: nowrap;
+  animation: marquee 34s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.marquee-separator {
+  margin-left: 1.5rem;
+  opacity: 0.9;
+}
